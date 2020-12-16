@@ -24,6 +24,7 @@ function share() {
 		hashtag: 'Lesca',
 	});
 }
+<button onClick={share}>share to facebook</button>;
 ```
 
 # Methods
