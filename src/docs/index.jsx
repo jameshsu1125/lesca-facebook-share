@@ -4,7 +4,7 @@ import Facebook from './../lib/index';
 
 import './styles.css';
 
-Facebook.install('xxxxxxxx', {
+Facebook.install('171368189560011', {
 	onload: () => {
 		console.log(FB);
 	},
