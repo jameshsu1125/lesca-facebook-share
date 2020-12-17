@@ -35,7 +35,6 @@ function share() {
 | install(uid, {v, onload })                   |     uid      |       facebook app id        |               |
 |                                              |      v       |  version of facebook sdk.js  |           8.0 |
 |                                              |    onload    |       get FB function        |               |
-|                                              |   callback   | call when over gravity value |               |
 | share({ url, hashtag, quote, redirect_uri }) |     url      |        og:meta source        |               |
 |                                              |   hashtag    |           hashtag            |               |
 |                                              |    quote     |            quote             |               |
