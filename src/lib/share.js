@@ -1,5 +1,9 @@
+const defaultOption = { v: 'v8.0', onload: () => {} };
 module.exports = {
-	install(uid, { v = 'v8.0', onload }) {
+	install(uid, options = defaultOption) {
+		const opt = { ...defaultOption, ...options };
+		const { onload, v } = opt;
+
 		window.facebook_app_id = uid;
 
 		window.fbAsyncInit = function () {

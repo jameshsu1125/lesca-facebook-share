@@ -1,6 +1,6 @@
 {
 	"name": "lesca-facebook-share",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "for facebook share only",
 	"main": "lib/index.js",
 	"scripts": {
@@ -43,7 +43,7 @@
 		"webpack-dev-server": "^3.1.3"
 	},
 	"author": "jamehsu1125 <jameshsu1125@gmail.com>",
-	"homepage": "https://github.com/jameshsu1125/npm-base-package",
+	"homepage": "https://github.com/jameshsu1125/lesca-facebook-share",
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:jameshsu1125/lesca-facebook-share.git"

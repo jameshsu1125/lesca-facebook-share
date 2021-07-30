@@ -4,11 +4,7 @@ import Facebook from './../lib/index';
 
 import './styles.css';
 
-Facebook.install('171368189560011', {
-	onload: () => {
-		console.log(FB);
-	},
-});
+Facebook.install('171368189560011');
 
 function clicked() {
 	Facebook.share({
