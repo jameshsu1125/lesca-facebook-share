@@ -13,7 +13,7 @@ module.exports = {
 				xfbml: true,
 				version: v,
 			});
-			if (onload) onload();
+			onload?.();
 		};
 		(function (d, s, id) {
 			var js,
