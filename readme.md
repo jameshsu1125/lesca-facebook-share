@@ -15,7 +15,9 @@ npm install lesca-facebook-share --save
 ```javascript
 import Facebook from 'lesca-facebook-share';
 
+// run install in entry file.
 Facebook.install('facebook-app-id'); // get one => https://developers.facebook.com/apps/
+
 function share() {
 	Facebook.share({
 		url: 'https://github.com/jameshsu1125/lesca-facebook-share',
