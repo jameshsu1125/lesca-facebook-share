@@ -6,6 +6,10 @@
 npm install lesca-facebook-share --save
 ```
 
+# Demo
+
+[Live Demo](https://jameshsu1125.github.io/lesca-facebook-share/)
+
 # Usage
 
 ```javascript

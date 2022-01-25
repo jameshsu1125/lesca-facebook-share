@@ -1,7 +1,7 @@
 {
 	"name": "lesca-facebook-share",
 	"version": "1.0.4",
-	"description": "for facebook share only",
+	"description": "Simple facebook share",
 	"main": "lib/index.js",
 	"scripts": {
 		"start": "webpack-dev-server --mode development",
