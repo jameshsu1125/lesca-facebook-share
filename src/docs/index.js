@@ -23,6 +23,10 @@ function Page() {
 			<div>
 				<button onClick={onClick}>share</button>
 			</div>
+			<div>
+				<h1>Usage</h1>
+				<a href='https://jameshsu1125.github.io/lesca-facebook-share/'>Documentation</a>
+			</div>
 		</>
 	);
 }
