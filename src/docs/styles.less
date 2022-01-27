@@ -10,61 +10,71 @@
 @c4: #ea347c;
 
 body {
-	background: @m0;
-	margin: 0;
+	background: @m3;
+	padding: 10px;
+	box-sizing: border-box;
 
 	& > #app {
 		position: relative;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-start;
 		box-sizing: border-box;
-		padding: 10px;
-		min-height: 100vh;
 		width: 100%;
+		padding: 80px 0;
+		color: @m0;
 
-		& > div:nth-child(1) {
-			background-color: @m0;
-			& > p {
-				padding: 10px;
-				background-color: #eee;
-			}
-		}
-
-		& > div {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			justify-content: center;
-			margin: 10px 0;
-			padding: 10px;
-			width: 100%;
-			border-radius: 5px;
-			background-color: @m0;
-			color: @m2;
-
-			& > button {
-				padding: 20px;
-			}
-
-			& > a {
-				background-color: @m1;
-				padding: 10px 20px;
+		.content {
+			h1 {
 				color: @m0;
 			}
 
-			& > code {
+			figcaption {
+				font-size: smaller;
+			}
+
+			pre {
 				box-sizing: border-box;
 				padding: 20px;
 				width: 100%;
-				border: solid @m4 1px;
-				color: @m4;
+				max-width: 900px;
+				border: solid @m0 1px;
 				line-height: 20px;
+				background-color: #fff;
+				color: initial;
+				overflow: scroll;
 
 				& > span {
 					color: @m2;
 				}
+			}
+
+			a,
+			button {
+				background: linear-gradient(25deg, @m4, @c4);
+				border-radius: 5px;
+				padding: 10px 20px;
+				color: @m0;
+				box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+				transition: 0.1s;
+
+				&:hover {
+					box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+					transform: translateX(2px) translateY(2px);
+					background: linear-gradient(205deg, @m4, @c4);
+				}
+			}
+
+			& > div {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				margin: 10px 0;
+				padding: 10px;
+				width: 100%;
+				border-radius: 5px;
 			}
 		}
 	}

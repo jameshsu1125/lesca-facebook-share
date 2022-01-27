@@ -1,31 +1,51 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
+import Navation from './components';
+import Demo from './demo';
 import Facebook from '../lib/index';
+
+import 'prismjs/themes/prism.css';
 import './styles.less';
+
+const homepage = 'https://github.com/jameshsu1125/lesca-facebook-share';
+const name = 'lesca-facebook-share';
+const description = 'simple facebook share';
+const code = ``;
 
 Facebook.install('171368189560011');
 
 function Page() {
-	const onClick = useCallback(() => {
-		Facebook.share({
-			url: 'https://github.com/jameshsu1125/lesca-facebook-share',
-			quote: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-			hashtag: 'lesca-facebook-share',
-		});
-	}, []);
-
 	return (
 		<>
-			<div>
-				<h1>install</h1>
-				<p>npm install lesca-facebook-share --save</p>
-			</div>
-			<div>
-				<button onClick={onClick}>share</button>
-			</div>
-			<div>
-				<h1>Usage</h1>
-				<a href='https://jameshsu1125.github.io/lesca-facebook-share/'>Documentation</a>
+			<Navation />
+			<div className='content'>
+				<div>
+					<h1>{name}</h1>
+					<figcaption>{description}</figcaption>
+				</div>
+				<div>
+					<h2>install</h2>
+					<pre>
+						<code>
+							{HTMLReactParser(Prism.highlight(`npm install ${name} --save`, Prism.languages.javascript, 'command'))}
+						</code>
+					</pre>
+				</div>
+				<div>
+					<pre>
+						<code></code>
+					</pre>
+				</div>
+				<div>
+					<pre>
+						<code>{HTMLReactParser(Prism.highlight(code, Prism.languages.javascript, 'javascript'))}</code>
+					</pre>
+					<Demo />
+				</div>
+				<div>
+					<h2>Usage</h2>
+					<a href={homepage}>Documentation</a>
+				</div>
 			</div>
 		</>
 	);
