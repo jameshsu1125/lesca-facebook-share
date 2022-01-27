@@ -1,20 +1,33 @@
-import React from 'react';
 import { render } from 'react-dom';
-import Navation from './components';
+import { Navation, Code } from './components';
 import Demo from './demo';
 import Facebook from '../lib/index';
 
-import 'prismjs/themes/prism.css';
 import './styles.less';
 
 const homepage = 'https://github.com/jameshsu1125/lesca-facebook-share';
 const name = 'lesca-facebook-share';
 const description = 'simple facebook share';
-const code = ``;
+const code = `import Facebook from 'lesca-facebook-share'; 
+
+Facebook.install('facebook-app-id'); // => https://developers.facebook.com/apps/
+`;
+
+const code2 = `import Facebook from 'lesca-facebook-share
+
+const share = () => {
+	Facebook.share({
+		url: 'https://github.com/jameshsu1125/lesca-facebook-share',
+		quote: 'use share facebook api simply',
+		hashtag: 'lesca_facebook_share',
+	});
+};
+return <button onClick={share}>Facebook Share</button>
+`;
 
 Facebook.install('171368189560011');
 
-function Page() {
+const Page = () => {
 	return (
 		<>
 			<Navation />
@@ -25,21 +38,13 @@ function Page() {
 				</div>
 				<div>
 					<h2>install</h2>
-					<pre>
-						<code>
-							{HTMLReactParser(Prism.highlight(`npm install ${name} --save`, Prism.languages.javascript, 'command'))}
-						</code>
-					</pre>
+					<Code code={`npm install ${name} --save`} theme='markup' />
 				</div>
 				<div>
-					<pre>
-						<code></code>
-					</pre>
-				</div>
-				<div>
-					<pre>
-						<code>{HTMLReactParser(Prism.highlight(code, Prism.languages.javascript, 'javascript'))}</code>
-					</pre>
+					<h2>run install on entry file</h2>
+					<Code code={code} />
+					<h2>share your url with parameters</h2>
+					<Code code={code2} theme='javascript' />
 					<Demo />
 				</div>
 				<div>
@@ -49,6 +54,6 @@ function Page() {
 			</div>
 		</>
 	);
-}
+};
 
 render(<Page />, document.getElementById('app'));

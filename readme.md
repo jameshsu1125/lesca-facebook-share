@@ -17,12 +17,17 @@ import Facebook from 'lesca-facebook-share';
 
 // run install in entry file.
 Facebook.install('facebook-app-id'); // get one => https://developers.facebook.com/apps/
+```
+
+```javascript
+import Facebook from 'lesca-facebook-share';
 
 function share() {
 	Facebook.share({
 		url: 'https://github.com/jameshsu1125/lesca-facebook-share',
-		quote: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-		hashtag: 'lesca-facebook-share',
+		quote: 'use share facebook api simply',
+		hashtag: 'lesca_facebook_share',
+		redirect_uri: window.location.href,
 	});
 }
 
@@ -31,10 +36,10 @@ function share() {
 
 # Methods
 
-| method                                       |   options    |        description         |       default |
-| :------------------------------------------- | :----------: | :------------------------: | ------------: |
-| install(uid)                                 |     uid      |      facebook app id       |               |
-| share({ url, hashtag, quote, redirect_uri }) |     url      |       og:meta source       |               |
-|                                              |   hashtag    |          hashtag           |               |
-|                                              |    quote     |           quote            |               |
-|                                              | redirect_uri | !! mobile device necessary | location root |
+| method                                        |   options    |            description             |       default |
+| :-------------------------------------------- | :----------: | :--------------------------------: | ------------: |
+| .install(uid)                                 |     uid      | install FB.js with facebook app id |               |
+| .share({ url, hashtag, quote, redirect_uri }) |     url      |     The URL you want to share      |               |
+|                                               |   hashtag    |            with hashtag            |               |
+|                                               |    quote     |             with quote             |               |
+|                                               | redirect_uri |      mobile device necessary       | location root |

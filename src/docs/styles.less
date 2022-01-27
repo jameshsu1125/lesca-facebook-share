@@ -10,9 +10,10 @@
 @c4: #ea347c;
 
 body {
-	background: @m3;
-	padding: 10px;
 	box-sizing: border-box;
+	padding: 10px;
+	background: @m3;
+	overscroll-behavior: none;
 
 	& > #app {
 		position: relative;
@@ -21,11 +22,12 @@ body {
 		flex-direction: column;
 		justify-content: flex-start;
 		box-sizing: border-box;
+		padding: 50px 0;
 		width: 100%;
-		padding: 80px 0;
 		color: @m0;
 
 		.content {
+			width: 100%;
 			h1 {
 				color: @m0;
 			}
@@ -35,15 +37,15 @@ body {
 			}
 
 			pre {
+				overflow: scroll;
 				box-sizing: border-box;
 				padding: 20px;
-				width: 100%;
 				max-width: 900px;
+				width: 100%;
 				border: solid @m0 1px;
-				line-height: 20px;
-				background-color: #fff;
+				background: linear-gradient(25deg, #fff, @m0);
 				color: initial;
-				overflow: scroll;
+				line-height: 20px;
 
 				& > span {
 					color: @m2;
@@ -52,17 +54,16 @@ body {
 
 			a,
 			button {
-				background: linear-gradient(25deg, @m4, @c4);
-				border-radius: 5px;
 				padding: 10px 20px;
-				color: @m0;
+				border-radius: 5px;
+				background: linear-gradient(25deg, @m4, @c4);
 				box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+				color: @m0;
 				transition: 0.1s;
 
 				&:hover {
 					box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
 					transform: translateX(2px) translateY(2px);
-					background: linear-gradient(205deg, @m4, @c4);
 				}
 			}
 
@@ -71,6 +72,7 @@ body {
 				align-items: center;
 				flex-direction: column;
 				justify-content: center;
+				box-sizing: border-box;
 				margin: 10px 0;
 				padding: 10px;
 				width: 100%;
