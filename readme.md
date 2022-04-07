@@ -8,7 +8,7 @@
 
 # Why use it?
 
-It jsut use for share url to Facebook simply.
+It use for share url to Facebook simply.
 
 #### [Live Demo](https://jameshsu1125.github.io/lesca-facebook-share/)
 
