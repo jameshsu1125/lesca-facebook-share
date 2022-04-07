@@ -1,59 +1,35 @@
-import { render } from 'react-dom';
-import { Navation, Code } from './components';
-import Demo from './demo';
-import Facebook from '../lib/index';
-
+import { Container } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import Navigation from './components/navigation';
+import Demo from './pages/demo';
+import Usage from './pages/usage';
 import './styles.less';
+import { theme } from './theme';
 
-const homepage = 'https://github.com/jameshsu1125/lesca-facebook-share';
-const name = 'lesca-facebook-share';
-const description = 'simple facebook share';
-const code = `import Facebook from 'lesca-facebook-share'; 
+const App = () => {
+	const [state, setState] = useState('demo');
 
-Facebook.install('facebook-app-id'); // => https://developers.facebook.com/apps/
-`;
+	const appendPage = () => {
+		switch (state) {
+			default:
+			case 'demo':
+				return <Demo />;
 
-const code2 = `import Facebook from 'lesca-facebook-share
+			case 'usage':
+				return <Usage />;
+		}
+	};
 
-const share = () => {
-	Facebook.share({
-		url: 'https://github.com/jameshsu1125/lesca-facebook-share',
-		quote: 'use share facebook api simply',
-		hashtag: 'lesca_facebook_share',
-	});
-};
-return <button onClick={share}>Facebook Share</button>
-`;
-
-Facebook.install('171368189560011');
-
-const Page = () => {
 	return (
-		<>
-			<Navation />
-			<div className='content'>
-				<div>
-					<h1>{name}</h1>
-					<figcaption>{description}</figcaption>
-				</div>
-				<div>
-					<h2>install</h2>
-					<Code code={`npm install ${name} --save`} theme='markup' />
-				</div>
-				<div>
-					<h2>run install on entry file</h2>
-					<Code code={code} />
-					<h2>share your url with parameters</h2>
-					<Code code={code2} theme='javascript' />
-					<Demo />
-				</div>
-				<div>
-					<h2>Usage</h2>
-					<a href={homepage}>Documentation</a>
-				</div>
-			</div>
-		</>
+		<ThemeProvider theme={theme}>
+			<Navigation setState={setState} state={state} />
+			<Container style={{ paddingTop: '70px' }} maxWidth='lg'>
+				{appendPage()}
+			</Container>
+		</ThemeProvider>
 	);
 };
 
-render(<Page />, document.getElementById('app'));
+createRoot(document.getElementById('app')).render(<App />);
