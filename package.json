@@ -1,6 +1,6 @@
 {
   "name": "lesca-facebook-share",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple facebook share",
   "main": "lib/index.js",
   "scripts": {
@@ -54,10 +54,5 @@
     "prismjs": "^1.27.0",
     "mobile-detect": "^1.4.5"
   },
-  "author": "jamehsu1125 <jameshsu1125@gmail.com>",
-  "homepage": "https://github.com/jameshsu1125/lesca-facebook-share",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:jameshsu1125/lesca-facebook-share.git"
-  }
+  "author": "jamehsu1125 <jameshsu1125@gmail.com>"
 }
