@@ -1,6 +1,6 @@
 {
   "name": "lesca-facebook-share",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Simple facebook share",
   "main": "lib/index.js",
   "scripts": {
@@ -51,8 +51,7 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1",
     "html-react-parser": "^1.4.10",
-    "prismjs": "^1.27.0",
-    "mobile-detect": "^1.4.5"
+    "prismjs": "^1.27.0"
   },
   "author": "jamehsu1125 <jameshsu1125@gmail.com>"
 }
