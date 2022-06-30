@@ -18,7 +18,7 @@ Facebook.install('facebook-app-id'); // get your id => https://developers.facebo
   {
     title: '3. run share with parameters',
     code: `Facebook.share({
-  url: 'https://github.com/jameshsu1125/lesca-facebook-share',
+  href: 'https://github.com/jameshsu1125/lesca-facebook-share',
   quote: 'use share facebook api simply',
   hashtag: 'lesca_facebook_share',
   redirect_uri: window.location.href,

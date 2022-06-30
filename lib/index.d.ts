@@ -1,0 +1,24 @@
+declare global {
+    interface Window {
+        fbAsyncInit: Function;
+        FB: any;
+    }
+    interface HTMLElement {
+        src: string;
+    }
+}
+declare type Options = {
+    id: string;
+};
+declare type ShareOptions = {
+    method: string;
+    href: string;
+    redirect_uri?: string;
+    hashtag?: string;
+    quote?: string;
+};
+declare const Facebook: {
+    install: (uid: string, options: Options) => void;
+    share: (shareOptions?: ShareOptions) => void;
+};
+export default Facebook;

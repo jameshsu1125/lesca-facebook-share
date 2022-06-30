@@ -7,7 +7,7 @@ Facebook.install('171368189560011');
 const Demo = () => {
   const share = useCallback(() => {
     const parameters = {
-      url: 'https://www.npmjs.com/package/lesca-facebook-share',
+      href: 'https://www.npmjs.com/package/lesca-facebook-share',
       quote: 'use share facebook api simply',
       hashtag: 'this_is_hashtag',
     };
