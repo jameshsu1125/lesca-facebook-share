@@ -7,10 +7,10 @@ declare global {
         src: string;
     }
 }
-declare type Options = {
+type Options = {
     id: string;
 };
-declare type ShareOptions = {
+type ShareOptions = {
     method: string;
     href: string;
     redirect_uri?: string;
