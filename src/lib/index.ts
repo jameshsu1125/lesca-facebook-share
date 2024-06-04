@@ -22,10 +22,10 @@ type ShareOptions = {
   quote?: string;
 };
 
-const defaultOption = { v: 'v8.0', onload: () => {} };
+const defaultOption = { v: 'v20.0', onload: () => {} };
 const property = { id: '' };
 
-const install = (uid: string, options: Options) => {
+const install = (uid: string, options?: Options) => {
   const opt = { ...defaultOption, ...options };
   const { onload, v } = opt;
   property.id = uid;

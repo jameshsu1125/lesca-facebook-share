@@ -18,7 +18,7 @@ type ShareOptions = {
     quote?: string;
 };
 declare const Facebook: {
-    install: (uid: string, options: Options) => void;
+    install: (uid: string, options?: Options) => void;
     share: (shareOptions?: ShareOptions) => void;
 };
 export default Facebook;
